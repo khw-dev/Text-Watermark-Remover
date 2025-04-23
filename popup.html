@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>Text Watermark Remover</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+</head>
+
+<body>
+    <div class="popup">
+        <h1>Text Watermark Remover</h1>
+
+        <label class="toggle">
+            <input type="checkbox" id="global-enable">
+            <span class="slider"></span>
+            <span class="label-text">모든 페이지에서 활성화</span>
+        </label>
+
+        <label class="toggle">
+            <input type="checkbox" id="site-enable">
+            <span class="slider"></span>
+            <span class="label-text">현재 페이지에서 활성화</span>
+        </label>
+
+        <div class="field">
+            <label for="domain-input">활성화된 도메인</label>
+            <div id="tags"></div>
+            <input type="text" id="domain-input" placeholder="활성화할 도메인을 입력하세요.">
+        </div>
+
+        <button id="save">변경 사항 저장하기</button>
+        <div id="status"></div>
+    </div>
+</body>
+
+</html>

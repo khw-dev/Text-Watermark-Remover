@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Watermark Remover",
-  "version": "1.0",
-  "permissions": ["scripting"],
+  "name": "Text Watermark Remover",
+  "version": "1.1.0",
+  "permissions": ["scripting", "storage"],
   "host_permissions": ["<all_urls>"],
   "action": {
+    "default_popup": "popup.html",
+    "default_title": "Text Watermark Remover",
     "default_icon": "icon.png"
   },
   "content_scripts": [
@@ -16,7 +18,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["inject.js"],
+      "resources": ["inject.js", "popup.js"],
       "matches": ["<all_urls>"]
     }
   ]

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.popup {
+    width: 320px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle .slider {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    margin-right: 8px;
+    transition: background-color .2s;
+}
+
+.toggle .slider::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform .2s;
+}
+
+.toggle input:checked+.slider {
+    background: #33FF99;
+}
+
+.toggle input:checked+.slider::before {
+    transform: translateX(16px);
+}
+
+.toggle .label-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+.field label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.field input[type="text"] {
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.field input[type="text"]:focus {
+    border-color: #33FF99;
+    outline: none;
+}
+
+#tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px 0;
+}
+
+.tag {
+    background: #f1f1f1;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.tag .remove {
+    margin-left: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#domain-input {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 8px 0;
+    background: #66FF99;
+    color: #121213;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background-color .2s;
+}
+
+button:hover {
+    background-color: #33FF99;
+}
+
+#status {
+    text-align: center;
+    font-size: 12px;
+    color: #121213;
+    height: 16px;
+}
