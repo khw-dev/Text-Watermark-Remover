@@ -17,21 +17,9 @@ Watermark Remover is a Chrome extension that removes hidden watermark characters
 ## Configuration
 
 - **manifest.json**
-  - `content_scripts.matches`: URL patterns for injection
   - `content_scripts.run_at`: set to `document_start` to override clipboard APIs early
   - `web_accessible_resources`: include `inject.js` for page injection
   - Permissions: `scripting`, and host permissions for target domains
-
-## Project Structure
-
-```
-text-watermark-remover/
-├── content.js         # Injects inject.js into page context
-├── icon.png           # Chrome extension icon
-├── inject.js          # Overrides clipboard APIs
-├── manifest.json      # Extension metadata and permissions
-└── README.md          # Project documentation
-```
 
 ## Development
 
