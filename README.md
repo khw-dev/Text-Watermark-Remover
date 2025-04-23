@@ -1,6 +1,6 @@
-# Watermark Remover
+# Text Watermark Remover
 
-Watermark Remover is a Chrome extension that removes hidden watermark characters from copied text on web pages.
+Text Watermark Remover is a Chrome extension that removes hidden watermark characters from copied text on web pages.
 
 <img
   src="banner.png"
