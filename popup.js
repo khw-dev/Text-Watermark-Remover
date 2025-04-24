@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  const prefs = await chrome.storage.sync.get({
+  const prefs = await browser.storage.sync.get({
     enabled: true,
     enableOnThis: false,
     domains: [],
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderTags();
 
   btnSave.addEventListener("click", () => {
-    chrome.storage.sync.set(
+    browser.storage.sync.set(
       {
         enabled: chkGlobal.checked,
         enableOnThis: chkSite.checked,

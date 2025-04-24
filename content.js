@@ -8,11 +8,11 @@
 
   const inject = () => {
     const s = document.createElement("script");
-    s.src = chrome.runtime.getURL("inject.js");
+    s.src = browser.runtime.getURL("inject.js");
     (document.head || document.documentElement).append(s);
   };
 
-  const pref = await chrome.storage.sync.get({
+  const pref = await browser.storage.sync.get({
     enabled: true,
     enableOnThis: false,
     domains: [],
