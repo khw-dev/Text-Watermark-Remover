@@ -15,5 +15,10 @@
       "run_at": "document_start"
     }
   ],
-  "web_accessible_resources": ["inject.js"]
+  "web_accessible_resources": ["inject.js"],
+  "applications": {
+    "gecko": {
+      "id": "watermark-remover@example.com"
+    }
+  }
 }
